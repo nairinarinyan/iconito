@@ -1,6 +1,6 @@
 {
   "name": "iconito",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "SVG icon tool",
   "main": "dist/index.js",
   "bin": "dist/bin.js",
@@ -24,7 +24,12 @@
   "homepage": "https://github.com/nairinarinyan/iconito#readme",
   "devDependencies": {
     "@types/node": "^18.14.1",
+    "@types/react": "^18.0.28",
+    "react": "^18.2.0",
     "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0"
   },
   "dependencies": {
     "svgo": "^3.0.2"
