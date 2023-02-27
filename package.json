@@ -1,0 +1,32 @@
+{
+  "name": "iconito",
+  "version": "0.0.1",
+  "description": "SVG icon tool",
+  "main": "dist/index.js",
+  "bin": "dist/bin.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nairinarinyan/iconito.git"
+  },
+  "keywords": [
+    "svg",
+    "icons"
+  ],
+  "author": "Nairi Narinyan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nairinarinyan/iconito/issues"
+  },
+  "homepage": "https://github.com/nairinarinyan/iconito#readme",
+  "devDependencies": {
+    "@types/node": "^18.14.1",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "svgo": "^3.0.2"
+  }
+}
