@@ -21,7 +21,7 @@ Add either `.iconitorc` file in the root of your project
 Or add a field in your `package.json`
 ```json
 "iconito": {
-  "definitions": "src/assets/icons/icon-definitions.sg"
+  "definitions": "src/assets/icons/icon-definitions.svg"
 }
 ```
 
@@ -46,7 +46,7 @@ so it can be referenced later with
 The definitions file will end up with something like this
 ```xml
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-<symbol viewBox="0 0 24 24" id="icon-name"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"/></symbol>
+  <symbol viewBox="0 0 24 24" id="icon-name"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"/></symbol>
 </svg>
 ```
 
@@ -57,17 +57,17 @@ If you want to preserve original colors, pass `--keepColors` while adding the ic
 
 For the icon symbols to be available in DOM, you should pass the contents of the file to the `initIcons` function. Getting the contents of the definition file depends on your build system/bundler.  
 If you are using Parcel, you can import the file with `bundle-text`.
-```ts
+```js
 import iconDefinitions from 'bundle-text:./assets/icons/icon-definitions.svg';
 ```
 
 And for webpack
-```ts
+```js
 import iconDefinitions from 'raw-loader!./assets/icons/icon-definitions.svg';
 ```
 
 And then
-```ts
+```js
 import { initIcons } from 'iconito';
 
 initIcons(iconDefinitions);
@@ -76,7 +76,7 @@ initIcons(iconDefinitions);
 ### Using icons in React
 You can use the provdided `Icon` component
 
-```tsx
+```jsx
 import { Icon } from 'iconito';
 
 <Icon 
